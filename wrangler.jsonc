@@ -14,14 +14,11 @@
     "binding": "AI"
   },
 
-  // PASO MANUAL PENDIENTE (Escuela de LideresVIP): corre
-  // `npx wrangler d1 create koinonia-lms-db` y reemplaza "database_id" abajo
-  // con el ID que te devuelva ese comando.
   "d1_databases": [
     {
       "binding": "DB",
       "database_name": "koinonia-lms-db",
-      "database_id": "REEMPLAZAR_CON_TU_DATABASE_ID"
+      "database_id": "15a6d2bf-5923-4fe8-9d0f-9ce4c5950fc9"
     }
   ],
 
