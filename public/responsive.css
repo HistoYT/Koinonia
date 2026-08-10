@@ -1,0 +1,77 @@
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:920px){
+  nav.links {
+    /* display: none; se reemplaza por opacity/visibility para la animación */
+    position: absolute;
+    top: 100%; /* Justo debajo del .nav-wrap */
+    left: 0;
+    right: 0;
+    height: auto;
+    background-color: var(--cream);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    z-index: 101; /* Aumentado para que aparezca sobre el header (z-index: 100) */
+    /* Propiedades de animación */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    /* Estilo de tarjeta */
+    padding: 10px 28px 28px;
+    border-radius: 0 0 var(--radius) var(--radius);
+    box-shadow: 0 20px 40px -20px rgba(15,58,66,.2);
+    border: 1px solid rgba(15,58,66,.08);
+    border-top: none;
+  }
+  nav.links.mobile-menu-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .desktop-btn {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: inline-flex;
+    margin-top: 12px;
+    justify-content: center; /* Centra el texto dentro del botón */
+  }
+  nav.links a {
+    font-size: 1.1rem;
+    padding: 12px 0;
+    color: var(--teal-deep);
+  }
+  .menu-toggle{display:block;}
+  .hero-grid{grid-template-columns:1fr;}
+  .hero-arrow{display:none;}
+  .mv-split{grid-template-columns:1fr;}
+  .mv-panel{padding:48px 32px;min-height:320px;}
+  .mv-number{font-size:4rem;top:10px;right:20px;}
+  .program-grid{grid-template-columns:1fr 1fr;}
+  .program-pillars{grid-template-columns:1fr 1fr;}
+  .news-grid{grid-template-columns:1fr;}
+  .event-featured{grid-template-columns:1fr;}
+  .event-media{padding:0 40px 40px;}
+  .event-arrow{width:38px;height:38px;font-size:1.3rem;}
+  .event-arrow-prev{left:8px;}
+  .event-arrow-next{right:8px;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:600px){
+  .program-grid{grid-template-columns:1fr;}
+  .program-pillars{grid-template-columns:1fr;}
+  .schedule-inner{flex-direction:column;align-items:flex-start;}
+  .footer-grid{grid-template-columns:1fr;}
+  .hero{padding:70px 0 90px;}
+  .program-card-vip{flex-direction:column;padding:32px 24px;}
+  .program-card-vip .vip-logo{width:100px;height:100px;}
+  .event-copy{padding:36px 28px;}
+  .event-countdown{gap:8px;}
+  .cd-block{min-width:0;flex:1;padding:10px 6px;}
+  .cd-value{font-size:1.2rem;}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important; animation:none !important; scroll-behavior:auto !important;}
+}

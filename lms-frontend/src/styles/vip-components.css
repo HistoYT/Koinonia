@@ -1,0 +1,103 @@
+/* Componentes visuales reutilizables en toda la Escuela de LideresVIP:
+   botones, campos de formulario y mensajes de estado/error. */
+
+.vip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+.vip-btn-gold { background: #C8A45D; color: #123B5D; }
+.vip-btn-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -8px rgba(200, 164, 93, 0.6); }
+.vip-btn-gold:disabled { opacity: 0.6; cursor: default; transform: none; box-shadow: none; }
+.vip-btn-outline { border-color: rgba(255, 255, 255, 0.4); color: #fff; background: transparent; }
+.vip-btn-outline:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.8); }
+.vip-btn-full { width: 100%; justify-content: center; }
+
+.vip-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 24px;
+  padding: 40px 36px;
+  backdrop-filter: blur(6px);
+}
+
+.vip-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+  margin-top: 24px;
+}
+.vip-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.vip-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+}
+.vip-form input {
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.vip-form input::placeholder { color: rgba(255, 255, 255, 0.35); }
+.vip-form input:focus { border-color: #C8A45D; background: rgba(255, 255, 255, 0.12); }
+.vip-form input[aria-invalid='true'] { border-color: #ff9d9d; }
+
+.vip-field-error {
+  font-size: 0.78rem;
+  color: #ff9d9d;
+  margin: 0;
+}
+
+.vip-form-error {
+  background: rgba(220, 80, 80, 0.15);
+  border: 1px solid rgba(220, 80, 80, 0.35);
+  color: #ffb3b3;
+  font-size: 0.85rem;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.vip-switch {
+  margin-top: 22px;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+.vip-switch a {
+  color: #C8A45D;
+  font-weight: 700;
+  text-decoration: none;
+}
+.vip-switch a:hover { text-decoration: underline; }
+
+@media (max-width: 480px) {
+  .vip-card { padding: 32px 24px; }
+  .vip-form-row { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1786252344220,
+      "tag": "0000_purple_warstar",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1786323832530,
+      "tag": "0001_amazing_morgan_stark",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1786336609721,
+      "tag": "0002_dizzy_clint_barton",
+      "breakpoints": true
+    }
+  ]
+}

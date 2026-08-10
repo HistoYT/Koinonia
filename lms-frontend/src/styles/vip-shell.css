@@ -1,0 +1,80 @@
+/* Shell compartido por las páginas públicas de la Escuela de LideresVIP
+   (Home, Login, Register): fondo degradado azul marca + barra superior. */
+
+.vip-hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 24px 80px;
+  background: linear-gradient(160deg, #123B5D 0%, #0F3252 100%);
+  overflow: hidden;
+  font-family: 'Manrope', sans-serif;
+}
+.vip-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 82% 12%, rgba(200, 164, 93, 0.22), transparent 55%),
+    radial-gradient(circle at 12% 88%, rgba(200, 164, 93, 0.12), transparent 50%);
+  pointer-events: none;
+}
+
+.vip-topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 32px;
+}
+.vip-brand {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #fff;
+}
+.vip-back-link {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.35);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.vip-back-link:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.vip-content {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vip-eyebrow {
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #C8A45D;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 600px) {
+  .vip-topbar { padding: 18px 20px; }
+}

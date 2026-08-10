@@ -1,0 +1,37 @@
+{
+  "name": "koinonia",
+  "main": "worker/index.ts",
+  "compatibility_date": "2025-07-18",
+  // run_worker_first:true hace que TODA request pase primero por el Worker; el propio
+  // código en worker/index.ts decide servir la API o reenviar a ASSETS (ver catch-all).
+  // (Forma booleana a propósito: compatible con Wrangler 3.x y 4.x, sin depender de versión.)
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "ai": {
+    "binding": "AI"
+  },
+
+  // PASO MANUAL PENDIENTE (Escuela de LideresVIP): corre
+  // `npx wrangler d1 create koinonia-lms-db` y reemplaza "database_id" abajo
+  // con el ID que te devuelva ese comando.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "koinonia-lms-db",
+      "database_id": "REEMPLAZAR_CON_TU_DATABASE_ID"
+    }
+  ],
+
+  // Almacena las imágenes que suba el administrador (afiches de eventos, etc.).
+  // En local, wrangler simula el bucket automáticamente. Para producción hay
+  // que crearlo una vez: `npx wrangler r2 bucket create koinonia-uploads`.
+  "r2_buckets": [
+    {
+      "binding": "UPLOADS",
+      "bucket_name": "koinonia-uploads"
+    }
+  ]
+}

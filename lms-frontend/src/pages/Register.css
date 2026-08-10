@@ -1,0 +1,10 @@
+.register-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: #fff;
+  margin: 0;
+}
+.register-card {
+  max-width: 480px;
+}

@@ -1,0 +1,307 @@
+/* Estilos compartidos por las páginas de administración de contenido
+   (AdminCourses, AdminWorkshops, AdminStudents): formulario, grilla de
+   tarjetas y tabla. Estas páginas se renderizan dentro de <AppShell>. */
+
+.admin-main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 48px 32px 80px;
+}
+.admin-main h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(1.7rem, 3.6vw, 2.2rem);
+  color: #1F2933;
+  margin: 0 0 8px;
+}
+.admin-subtitle {
+  color: #5B6B76;
+  font-size: 0.98rem;
+  margin: 0 0 32px;
+}
+
+.admin-form-card {
+  background: #fff;
+  border: 1px solid rgba(18, 59, 93, 0.08);
+  border-radius: 20px;
+  padding: 28px 28px 24px;
+  margin-bottom: 40px;
+}
+.admin-form-title {
+  font-weight: 700;
+  color: #1F2933;
+  margin: 0 0 18px;
+  font-size: 1.05rem;
+}
+.admin-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.admin-form .admin-field-full { grid-column: 1 / -1; }
+.admin-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1F2933;
+}
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+  font-family: inherit;
+  font-size: 0.92rem;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(18, 59, 93, 0.15);
+  background: #fff;
+  color: #1F2933;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.admin-form textarea { resize: vertical; min-height: 80px; }
+.admin-form input:focus,
+.admin-form select:focus,
+.admin-form textarea:focus { border-color: #C8A45D; }
+
+.admin-form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 4px;
+}
+.admin-form-error {
+  grid-column: 1 / -1;
+  background: rgba(220, 80, 80, 0.1);
+  border: 1px solid rgba(220, 80, 80, 0.3);
+  color: #b23a3a;
+  font-size: 0.85rem;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin: 0;
+}
+.admin-field-error {
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: #c0392b;
+  margin: 2px 0 0;
+}
+
+.admin-btn {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 10px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+}
+.admin-btn-primary { background: #C8A45D; color: #123B5D; }
+.admin-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 18px -8px rgba(200, 164, 93, 0.6); }
+.admin-btn-primary:disabled { opacity: 0.6; cursor: default; transform: none; box-shadow: none; }
+.admin-btn-ghost { background: none; border-color: rgba(18, 59, 93, 0.2); color: #123B5D; }
+.admin-btn-ghost:hover { background: rgba(18, 59, 93, 0.06); }
+
+.admin-list-title {
+  font-weight: 700;
+  color: #1F2933;
+  margin: 0 0 16px;
+  font-size: 1.05rem;
+}
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+}
+.admin-card {
+  background: #fff;
+  border: 1px solid rgba(18, 59, 93, 0.08);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.admin-card-title {
+  font-weight: 700;
+  color: #1F2933;
+  font-size: 1rem;
+  margin: 0;
+}
+.admin-card-meta {
+  font-size: 0.82rem;
+  color: #5B6B76;
+  margin: 0;
+}
+.admin-status-badge {
+  align-self: flex-start;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.admin-status-published, .admin-status-available { background: rgba(60, 160, 100, 0.15); color: #2e8b57; }
+.admin-status-draft, .admin-status-upcoming { background: rgba(200, 164, 93, 0.2); color: #a3792f; }
+.admin-status-archived, .admin-status-finished { background: rgba(120, 130, 140, 0.15); color: #5B6B76; }
+.admin-status-locked { background: rgba(220, 80, 80, 0.15); color: #b23a3a; }
+
+.admin-card-actions {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.admin-card-actions button,
+.admin-card-actions a {
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  border: 1.5px solid rgba(18, 59, 93, 0.15);
+  background: none;
+  color: #123B5D;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+.admin-card-actions button:hover,
+.admin-card-actions a:hover { background: rgba(18, 59, 93, 0.06); }
+.admin-card-actions .admin-delete-btn { border-color: rgba(220, 80, 80, 0.3); color: #b23a3a; }
+.admin-card-actions .admin-delete-btn:hover { background: rgba(220, 80, 80, 0.08); }
+
+.admin-new-btn { margin-bottom: 32px; }
+
+.admin-empty {
+  color: #5B6B76;
+  font-size: 0.92rem;
+  padding: 24px;
+  text-align: center;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px dashed rgba(18, 59, 93, 0.15);
+}
+
+.event-image-preview {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.event-image-preview img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(18, 59, 93, 0.12);
+}
+
+.admin-add-btn {
+  align-self: flex-start;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 7px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  border: 1.5px dashed rgba(18, 59, 93, 0.25);
+  background: none;
+  color: #123B5D;
+}
+.admin-add-btn:hover { background: rgba(18, 59, 93, 0.05); }
+
+.student-list { display: flex; flex-direction: column; gap: 16px; }
+.student-card {
+  background: #fff;
+  border: 1px solid rgba(18, 59, 93, 0.08);
+  border-radius: 16px;
+  padding: 20px;
+}
+.student-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.student-registered {
+  font-size: 0.78rem;
+  color: #5B6B76;
+  margin: 4px 0 0;
+}
+
+.student-courses { margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(18, 59, 93, 0.08); }
+.student-courses-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #5B6B76;
+  margin: 0 0 10px;
+}
+.student-no-courses { font-size: 0.85rem; color: #5B6B76; margin: 0 0 10px; }
+
+.student-course-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.student-course-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #123B5D;
+  background: rgba(200, 164, 93, 0.18);
+  padding: 5px 8px 5px 12px;
+  border-radius: 999px;
+}
+.student-course-chip button {
+  font-family: inherit;
+  font-size: 0.7rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(18, 59, 93, 0.12);
+  color: #123B5D;
+  cursor: pointer;
+  line-height: 1;
+}
+.student-course-chip button:hover { background: rgba(18, 59, 93, 0.22); }
+
+.student-enroll-form { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.student-enroll-form select {
+  font-family: inherit;
+  font-size: 0.88rem;
+  padding: 8px 12px;
+  border-radius: 9px;
+  border: 1.5px solid rgba(18, 59, 93, 0.15);
+  background: #fff;
+  color: #1F2933;
+}
+
+.student-card-actions {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(18, 59, 93, 0.08);
+}
+.student-card-actions .admin-delete-btn {
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  border: 1.5px solid rgba(220, 80, 80, 0.3);
+  background: none;
+  color: #b23a3a;
+}
+.student-card-actions .admin-delete-btn:hover { background: rgba(220, 80, 80, 0.08); }
+.student-card-actions .admin-delete-btn:disabled { opacity: 0.6; cursor: default; }
+
+@media (max-width: 640px) {
+  .admin-main { padding: 32px 20px 60px; }
+  .admin-form { grid-template-columns: 1fr; }
+  .student-card-head { flex-direction: column; }
+}

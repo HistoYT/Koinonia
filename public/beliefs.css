@@ -1,0 +1,104 @@
+/* ---------- MISIÓN Y VISIÓN ---------- */
+.beliefs{
+  padding:110px 0 90px;
+  background:var(--white);
+}
+
+.mv-split{
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:0 40px 80px -40px rgba(15,33,41,.4);
+}
+
+.mv-panel{
+  position:relative;
+  padding:64px 56px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  overflow:hidden;
+  min-height:440px;
+}
+.mv-panel::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+}
+
+.mv-panel-mission{
+  background:linear-gradient(155deg, var(--brand-blue) 0%, #0F3252 100%);
+  color:var(--white);
+}
+.mv-panel-mission::before{
+  background:radial-gradient(circle at 88% 12%, rgba(200,164,93,.16), transparent 55%);
+}
+
+.mv-panel-vision{
+  background:var(--cream);
+  color:var(--ink);
+}
+.mv-panel-vision::before{
+  background:radial-gradient(circle at 12% 88%, rgba(18,59,93,.07), transparent 55%);
+}
+
+.mv-number{
+  position:absolute;
+  top:14px;right:30px;
+  font-family:'Fraunces',serif;
+  font-size:5.5rem;
+  font-weight:700;
+  line-height:1;
+  pointer-events:none;
+}
+.mv-panel-mission .mv-number{color:rgba(255,255,255,.1);}
+.mv-panel-vision .mv-number{color:rgba(18,59,93,.08);}
+
+.mv-icon{
+  position:relative;z-index:1;
+  width:52px;height:52px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:22px;
+}
+.mv-panel-mission .mv-icon{background:rgba(255,255,255,.14);color:var(--gold-light);}
+.mv-panel-vision .mv-icon{background:rgba(18,59,93,.08);color:var(--brand-blue);}
+.mv-icon svg{width:26px;height:26px;}
+
+.mv-label{
+  position:relative;z-index:1;
+  font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+  margin-bottom:10px;display:block;
+}
+.mv-panel-mission .mv-label{color:var(--gold-light);}
+.mv-panel-vision .mv-label{color:var(--brand-blue-light);}
+
+.mv-panel h3{
+  position:relative;z-index:1;
+  font-size:1.65rem;margin-bottom:14px;
+}
+.mv-panel-mission h3{color:var(--white);}
+
+.mv-panel p{
+  position:relative;z-index:1;
+  font-size:1rem;margin-bottom:0;max-width:38ch;
+}
+.mv-panel-mission p{color:rgba(255,255,255,.82);}
+.mv-panel-vision p{color:var(--ink-soft);}
+
+.mv-seam{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  z-index:3;
+}
+.mv-seam-badge{
+  width:64px;height:64px;border-radius:50%;
+  background:var(--white);
+  border:3px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 12px 26px -8px rgba(0,0,0,.35);
+}
+.mv-seam-badge svg{width:26px;height:26px;}

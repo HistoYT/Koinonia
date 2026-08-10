@@ -1,0 +1,144 @@
+/* Layout compartido por las páginas internas de la Escuela de LideresVIP
+   (Dashboard, Catalog, AdminCourses, AdminWorkshops, AdminStudents):
+   barra superior + sidebar colapsable + área de contenido. Igual para
+   administrador y estudiante — solo cambian los enlaces visibles. */
+
+.app-shell {
+  min-height: 100vh;
+  min-height: 100svh;
+  background: #F7F5EF;
+  font-family: 'Manrope', sans-serif;
+}
+
+.app-topbar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #123B5D, #0F3252);
+  color: #fff;
+}
+.app-brand {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.app-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+.app-role-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(200, 164, 93, 0.2);
+  color: #C8A45D;
+}
+.app-logout {
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  background: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.app-logout:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.app-sidebar-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.app-sidebar-toggle span {
+  display: block;
+  height: 2px;
+  margin: 0 8px;
+  background: #fff;
+  border-radius: 2px;
+}
+.app-sidebar-toggle:hover { background: rgba(255, 255, 255, 0.16); }
+
+.app-body {
+  display: flex;
+  align-items: flex-start;
+}
+
+.app-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  background: #fff;
+  border-right: 1px solid rgba(18, 59, 93, 0.08);
+  min-height: calc(100vh - 63px);
+  min-height: calc(100svh - 63px);
+  overflow: hidden;
+  transition: width 0.22s ease, opacity 0.18s ease;
+}
+.app-sidebar-closed {
+  width: 0;
+  opacity: 0;
+  border-right-color: transparent;
+}
+
+.app-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 20px 14px;
+  width: 250px;
+}
+.app-nav-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1F2933;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.app-nav-link:hover { background: rgba(18, 59, 93, 0.06); }
+.app-nav-link-active {
+  background: rgba(200, 164, 93, 0.18);
+  color: #123B5D;
+}
+.app-nav-section {
+  margin: 18px 14px 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #5B6B76;
+}
+
+.app-content {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 720px) {
+  .app-topbar { padding: 14px 16px; gap: 12px; }
+  .app-brand { font-size: 1rem; }
+  .app-sidebar { position: fixed; top: 63px; left: 0; bottom: 0; z-index: 20; box-shadow: 0 20px 40px -20px rgba(15, 33, 41, 0.35); }
+  .app-sidebar-closed { box-shadow: none; }
+}

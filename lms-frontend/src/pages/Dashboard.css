@@ -1,0 +1,43 @@
+.dash-main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 56px 32px;
+}
+.dash-main h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  color: #1F2933;
+  margin: 0 0 8px;
+}
+.dash-subtitle {
+  color: #5B6B76;
+  font-size: 1.05rem;
+  margin: 0 0 36px;
+}
+
+.dash-empty-state {
+  background: #fff;
+  border: 1px solid rgba(18, 59, 93, 0.08);
+  border-radius: 22px;
+  padding: 40px 32px;
+  text-align: center;
+}
+.dash-empty-title {
+  font-weight: 700;
+  color: #1F2933;
+  margin: 0 0 10px;
+}
+.dash-empty-hint {
+  color: #5B6B76;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 46ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 600px) {
+  .dash-main { padding: 40px 20px; }
+}

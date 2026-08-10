@@ -1,0 +1,161 @@
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;
+  color: white;
+  overflow:hidden;
+  padding:120px 0;
+  min-height:100vh;
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+}
+.hero-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 1.6s ease-in-out;
+}
+.hero-slide.active {
+  opacity: 1;
+  animation: hero-kenburns 6s ease-in-out infinite;
+}
+@keyframes hero-kenburns{
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(180deg, rgba(18,59,93,.75) 0%, rgba(18,59,93,.55) 45%, rgba(18,59,93,.85) 100%),
+    linear-gradient(90deg, rgba(18,59,93,.35), transparent 60%);
+  z-index: -1;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1fr;gap:56px;align-items:center;
+  position:relative;z-index:2;
+  text-align: center;
+  width:100%;
+}
+.hero-grid > div{max-width:760px;margin:0 auto;}
+.hero h1{
+  color: #FFFFFF;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  font-size:clamp(2.4rem,4.4vw,3.2rem);
+  line-height:1.2;
+  margin-bottom:22px;
+}
+.hero h1 em{
+  font-style:normal;
+  color:var(--gold-light);
+}
+.hero h1 em.highlight { color: var(--gold-light); }
+.hero p.lead{
+  font-size:1.05rem;
+  color: rgba(255,255,255,0.9);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  max-width:620px;
+  margin-bottom:40px;
+  line-height: 1.7;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap; justify-content: center;}
+.hero .btn-gold {
+  background: var(--gold);
+  color: var(--brand-blue);
+  box-shadow: 0 10px 26px -8px rgba(0,0,0,.5);
+}
+.hero .btn-gold:hover {
+  background: var(--cream);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+.hero .btn-outline {
+  border-color: rgba(255,255,255,0.4);
+  color: var(--white);
+}
+.hero .btn-outline:hover {
+  background: rgba(255,255,255, .1);
+  border-color: rgba(255,255,255, .8);
+}
+.hero .eyebrow {
+  color: rgba(255,255,255,0.85);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  justify-content: center;
+}
+
+/* -- Animation Canvas -- */
+#hero-particles{
+  position:absolute;
+  top:0;left:0;width:100%;height:100%;
+  z-index:1;
+}
+
+/* -- Carousel controls: arrows -- */
+.hero-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:5;
+  width:46px;height:46px;
+  border-radius:50%;
+  border:1.5px solid rgba(255,255,255,.4);
+  background:rgba(18,59,93,.35);
+  color:var(--white);
+  font-size:1.6rem;
+  line-height:1;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+  backdrop-filter: blur(4px);
+  transition:background .2s ease, border-color .2s ease, transform .2s ease;
+}
+.hero-arrow:hover{
+  background:rgba(200,164,93,.85);
+  border-color:var(--gold);
+  color:var(--brand-blue);
+}
+.hero-arrow-prev{left:20px;}
+.hero-arrow-next{right:20px;}
+
+/* -- Carousel controls: dots -- */
+.hero-dots{
+  position:absolute;
+  left:50%;
+  bottom:28px;
+  transform:translateX(-50%);
+  z-index:5;
+  display:flex;
+  gap:10px;
+}
+.hero-dot{
+  width:10px;height:10px;border-radius:50%;
+  border:1.5px solid rgba(255,255,255,.7);
+  background:rgba(255,255,255,.25);
+  padding:0;
+  cursor:pointer;
+  transition:background .25s ease, transform .25s ease, border-color .25s ease;
+}
+.hero-dot:hover{border-color:var(--gold-light);}
+.hero-dot.active{
+  background:var(--gold);
+  border-color:var(--gold);
+  transform:scale(1.2);
+}

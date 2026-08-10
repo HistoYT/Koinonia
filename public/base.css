@@ -1,0 +1,54 @@
+:root {
+  /* Paleta de colores: Azules, crema y dorado */
+  --cream: #F7F5EF;            /* Crema muy suave */
+  --white: #FFFFFF;
+  --gold: #C8A45D;             /* Dorado */
+  --gold-light: #C8A45D;
+  --accent-warm: #C8A45D;
+  --brand-blue: #123B5D;       /* Azul profundo */
+  --brand-blue-light: #1E5A85; /* Azul medio para hover */
+  --teal-deep: #1F2933;        /* Tinta oscura para texto y fondos oscuros */
+  --text-main: #1F2933;
+  --text-secondary: #1E5A85;
+  --text-on-dark: #FFFFFF;
+  --ink: #1F2933;
+  --ink-soft: #5B6B76;
+
+  /* Tonos derivados del azul de marca, usados en degradados y acentos */
+  --teal-pale: #EEF3F6;        /* casi crema, con un dejo de azul: fondos claros */
+  --teal-mid: #1E5A85;         /* = brand-blue-light, tono medio */
+  --teal-bright: #2E6E9E;      /* azul intermedio más saturado, entre mid y deep */
+
+  /* Layout */
+  --radius: 22px;
+  --maxw: 1180px;
+}
+
+*{box-sizing:border-box;}
+/* Compensa la altura del header sticky para que las secciones no queden
+   tapadas al saltar a un ancla (#nosotros, #programas, etc.). */
+html{scroll-behavior:smooth;scroll-padding-top:90px;}
+body{
+  margin:0;
+  font-family:'Manrope',sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{
+  font-family:'Fraunces',serif;
+  font-weight:600;
+  margin:0 0 .5em 0;
+  color:var(--teal-deep);
+  letter-spacing:-0.01em;
+}
+p{margin:0 0 1em 0;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;}
+
+body.no-scroll {
+  overflow: hidden;
+}

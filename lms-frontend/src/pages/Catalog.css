@@ -1,0 +1,99 @@
+.catalog-main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 56px 32px 80px;
+}
+.catalog-main h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  color: #1F2933;
+  margin: 0 0 8px;
+}
+
+.catalog-section { margin-top: 44px; }
+.catalog-section-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #1F2933;
+  margin: 0 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(200, 164, 93, 0.35);
+}
+
+.catalog-group { margin-bottom: 32px; }
+.catalog-group-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1E5A85;
+  margin: 0 0 14px;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.catalog-card {
+  background: #fff;
+  border: 1px solid rgba(18, 59, 93, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.catalog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 36px -24px rgba(15, 33, 41, 0.35);
+}
+.catalog-card-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  background: #EEF3F6;
+}
+.catalog-card-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+.catalog-card-title {
+  font-weight: 700;
+  color: #1F2933;
+  margin: 0;
+  font-size: 1rem;
+}
+.catalog-card-instructor {
+  font-size: 0.8rem;
+  color: #5B6B76;
+  margin: 0;
+}
+.catalog-card-desc {
+  font-size: 0.85rem;
+  color: #5B6B76;
+  margin: 4px 0 0;
+  line-height: 1.5;
+  flex: 1;
+}
+.catalog-price-badge {
+  align-self: flex-start;
+  margin-top: 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #123B5D;
+  background: rgba(200, 164, 93, 0.18);
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+@media (max-width: 640px) {
+  .catalog-main { padding: 40px 20px 60px; }
+}
