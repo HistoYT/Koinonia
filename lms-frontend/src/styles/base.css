@@ -6,4 +6,5 @@ body {
   font-family: 'Manrope', sans-serif;
   background: #F7F5EF;
   margin: 0;
+  overflow-x: hidden;
 }

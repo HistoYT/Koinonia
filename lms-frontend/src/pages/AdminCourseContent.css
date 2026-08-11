@@ -57,7 +57,7 @@
 .cc-inline-form input:focus,
 .cc-inline-form select:focus,
 .cc-inline-form textarea:focus { border-color: #C8A45D; }
-.cc-inline-form-actions { display: flex; gap: 10px; }
+.cc-inline-form-actions { display: flex; flex-wrap: wrap; gap: 10px; }
 
 .cc-module-list { display: flex; flex-direction: column; gap: 14px; margin-top: 14px; }
 
@@ -73,7 +73,7 @@
   gap: 10px;
   flex-wrap: wrap;
 }
-.cc-module-title { font-weight: 700; color: #1F2933; flex: 1; }
+.cc-module-title { font-weight: 700; color: #1F2933; flex: 1; min-width: 0; }
 .cc-module-actions { display: flex; gap: 10px; }
 .cc-module-actions button {
   font-family: inherit;
@@ -128,7 +128,7 @@
   border-radius: 999px;
   flex-shrink: 0;
 }
-.cc-lesson-title { flex: 1; font-size: 0.88rem; color: #1F2933; }
+.cc-lesson-title { flex: 1; min-width: 0; font-size: 0.88rem; color: #1F2933; }
 .cc-lesson-actions { display: flex; gap: 8px; }
 .cc-lesson-actions button {
   font-family: inherit;
@@ -162,7 +162,7 @@
 .cc-question-list { margin-top: 12px; padding-left: 34px; display: flex; flex-direction: column; gap: 10px; }
 .cc-question-card { background: #F7F5EF; border-radius: 12px; padding: 12px 14px; }
 .cc-question-card-head { display: flex; align-items: flex-start; gap: 10px; }
-.cc-question-prompt { flex: 1; margin: 0; font-size: 0.9rem; font-weight: 600; color: #1F2933; }
+.cc-question-prompt { flex: 1; min-width: 0; margin: 0; font-size: 0.9rem; font-weight: 600; color: #1F2933; }
 
 .cc-option-list { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
 .cc-option-list li {

@@ -14,14 +14,27 @@ const ADMIN_NAV_ITEMS = [
   { to: '/admin/events', label: 'Eventos de Koinonía' },
 ];
 
+// En celular el sidebar se vuelve un panel flotante que tapa el contenido,
+// así que ahí debe arrancar cerrado; en escritorio empuja el contenido y
+// puede arrancar abierto sin estorbar.
+const MOBILE_BREAKPOINT = 720;
+
+function isMobileViewport() {
+  return typeof window !== 'undefined' && window.innerWidth <= MOBILE_BREAKPOINT;
+}
+
 export default function AppShell({ children }: { children: ReactNode }) {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(() => !isMobileViewport());
 
   async function handleLogout() {
     await logout();
     navigate('/');
+  }
+
+  function closeSidebarOnMobile() {
+    if (isMobileViewport()) setSidebarOpen(false);
   }
 
   function navLinkClass({ isActive }: { isActive: boolean }) {
@@ -56,10 +69,19 @@ export default function AppShell({ children }: { children: ReactNode }) {
       </header>
 
       <div className="app-body">
+        {sidebarOpen && (
+          <div className="app-backdrop" onClick={() => setSidebarOpen(false)} aria-hidden="true" />
+        )}
         <aside className={`app-sidebar${sidebarOpen ? '' : ' app-sidebar-closed'}`}>
           <nav className="app-nav">
             {NAV_ITEMS.map((item) => (
-              <NavLink key={item.to} to={item.to} end={item.end} className={navLinkClass}>
+              <NavLink
+                key={item.to}
+                to={item.to}
+                end={item.end}
+                className={navLinkClass}
+                onClick={closeSidebarOnMobile}
+              >
                 {item.label}
               </NavLink>
             ))}
@@ -68,7 +90,7 @@ export default function AppShell({ children }: { children: ReactNode }) {
               <>
                 <p className="app-nav-section">Administración</p>
                 {ADMIN_NAV_ITEMS.map((item) => (
-                  <NavLink key={item.to} to={item.to} className={navLinkClass}>
+                  <NavLink key={item.to} to={item.to} className={navLinkClass} onClick={closeSidebarOnMobile}>
                     {item.label}
                   </NavLink>
                 ))}

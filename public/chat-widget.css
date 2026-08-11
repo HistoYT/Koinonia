@@ -1,8 +1,6 @@
 /* ---------- CHAT WIDGET ---------- */
 .chat-widget{
   position:fixed;bottom:26px;right:26px;z-index:300;
-  display:flex;flex-direction:column;align-items:flex-end;
-  gap:14px;
   font-family:'Manrope',sans-serif;
 }
 
@@ -15,7 +13,6 @@
   cursor:pointer;
   transition:transform .2s ease, box-shadow .2s ease;
   position:relative;
-  flex-shrink:0;
 }
 .chat-toggle:hover{transform:scale(1.06);box-shadow:0 16px 34px -6px rgba(18,59,93,.65);}
 .chat-toggle svg{width:28px;height:28px;position:absolute;transition:opacity .2s ease, transform .2s ease;}
@@ -24,6 +21,14 @@
 .chat-toggle[aria-expanded="true"] .chat-icon-close{opacity:1;transform:scale(1) rotate(0);}
 
 .chat-panel{
+  /* Posicionado absoluto (no en el flujo flex) a propósito: si no, aunque
+     esté visualmente oculto (visibility:hidden), seguiría reservando su
+     espacio dentro de .chat-widget -hasta 520px de alto- y ese hueco
+     invisible tapaba los toques en cualquier contenido que quedara debajo,
+     en cualquier parte de la página, en pantallas de celular. */
+  position:absolute;
+  right:0;
+  bottom:74px;
   width:min(360px, calc(100vw - 52px));
   height:min(520px, calc(100vh - 140px));
   background:var(--white);

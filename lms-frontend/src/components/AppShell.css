@@ -136,9 +136,27 @@
   min-width: 0;
 }
 
+.app-backdrop { display: none; }
+
 @media (max-width: 720px) {
   .app-topbar { padding: 14px 16px; gap: 12px; }
-  .app-brand { font-size: 1rem; }
+  .app-brand {
+    font-size: 1rem;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .app-role-badge { display: none; }
+  .app-logout { font-size: 0.78rem; padding: 7px 12px; }
   .app-sidebar { position: fixed; top: 63px; left: 0; bottom: 0; z-index: 20; box-shadow: 0 20px 40px -20px rgba(15, 33, 41, 0.35); }
   .app-sidebar-closed { box-shadow: none; }
+  .app-backdrop {
+    display: block;
+    position: fixed;
+    inset: 63px 0 0 0;
+    background: rgba(15, 33, 41, 0.45);
+    z-index: 19;
+  }
 }
