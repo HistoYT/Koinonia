@@ -33,6 +33,13 @@
   opacity: 1;
   animation: hero-kenburns 6s ease-in-out infinite;
 }
+/* La foto real del equipo no está centrada en el encuadre: las personas
+   quedan más a la derecha y hacia arriba del cuadro cuadrado original,
+   así que reubicamos el foco para que sigan encuadradas tanto en móvil
+   (recorte horizontal) como en escritorio (recorte vertical). */
+.hero-slide-people{
+  background-position: 68% 22%;
+}
 @keyframes hero-kenburns{
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.12); }

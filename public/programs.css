@@ -65,35 +65,46 @@
 }
 .program-pillar h4{font-size:.95rem;margin:0;color:var(--ink);}
 
-/* ---------- VIP FEATURED CARD ---------- */
-.program-card-vip{
-  grid-column:1/-1;
+/* ---------- ESCUELA DE LIDERAZGO: DOS BRAZOS ---------- */
+.program-grid-arms{
+  grid-template-columns:repeat(2,1fr);
+}
+.program-card-arm{
   background:linear-gradient(155deg, var(--brand-blue) 0%, #0F3252 100%);
   border-color:rgba(200,164,93,.3);
-  flex-direction:row;
   align-items:center;
-  justify-content:center;
   text-align:center;
-  gap:32px;
-  padding:36px 40px;
+  gap:14px;
+  padding:44px 34px;
   position:relative;
   overflow:hidden;
 }
-.program-card-vip::before{
+.program-card-arm::before{
   content:'';
   position:absolute;inset:0;
   background:radial-gradient(circle at 85% 10%, rgba(200,164,93,.22), transparent 55%);
   pointer-events:none;
 }
-.program-card-vip:hover{border-color:rgba(200,164,93,.6);}
-.program-card-vip .vip-logo{
+.program-card-arm:hover{border-color:rgba(200,164,93,.6);}
+.program-card-arm .arm-badge,
+.program-card-arm .vip-logo{
   position:relative;z-index:1;
-  width:128px;height:128px;
+  width:96px;height:96px;
   border-radius:50%;
   background:var(--white);
-  padding:10px;
+  display:flex;align-items:center;justify-content:center;
   box-shadow:0 16px 32px -12px rgba(0,0,0,.4);
   transition:transform .3s ease;
 }
-.program-card-vip:hover .vip-logo{transform:scale(1.05);}
-.program-card-vip .btn{position:relative;z-index:1;}
+.program-card-arm .vip-logo{padding:8px;}
+.program-card-arm .arm-badge svg{width:42px;height:42px;color:var(--brand-blue);}
+.program-card-arm:hover .arm-badge,
+.program-card-arm:hover .vip-logo{transform:scale(1.05);}
+.program-card-arm .arm-eyebrow{
+  position:relative;z-index:1;
+  font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold-light);
+}
+.program-card-arm h3{position:relative;z-index:1;color:var(--white);font-size:1.28rem;margin:0;}
+.program-card-arm p{position:relative;z-index:1;color:rgba(255,255,255,.75);font-size:.95rem;flex-grow:0;}
+.program-card-arm .btn{position:relative;z-index:1;margin-top:6px;}
