@@ -14,33 +14,116 @@ body:not(.is-loaded){overflow:hidden;}
 
 .page-loader-mark{
   position:relative;
-  width:132px;height:132px;
+  width:168px;height:168px;
   display:flex;align-items:center;justify-content:center;
 }
-.page-loader-logo{
-  width:96px;height:auto;
-  animation:page-loader-pulse 1.6s ease-in-out infinite;
-}
-.page-loader-ring{
-  position:absolute;inset:0;
-  width:100%;height:100%;
-  animation:page-loader-spin 1.4s linear infinite;
-}
-.page-loader-ring circle{
-  fill:none;
-  stroke:var(--gold);
-  stroke-width:3;
-  stroke-linecap:round;
-  stroke-dasharray:70 208;
+
+/* Resplandor ambiental de fondo: respira de forma continua e independiente
+   del ciclo de crecimiento del isotipo, para que el loader se sienta vivo
+   incluso en la pausa entre ciclos. */
+.page-loader-glow{
+  position:absolute;
+  width:150px;height:150px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(50,129,149,.22) 0%, rgba(200,164,93,.14) 55%, transparent 75%);
+  filter:blur(2px);
+  animation:pl-glow-pulse 3.2s ease-in-out infinite;
 }
 
-@keyframes page-loader-spin{
+/* Un grano dorado orbitando lento alrededor del isotipo. */
+.page-loader-orbit{
+  position:absolute;
+  inset:0;
+  animation:pl-orbit-spin 5s linear infinite;
+}
+.page-loader-orbit-dot{
+  position:absolute;
+  top:6px;left:50%;
+  width:6px;height:6px;
+  margin-left:-3px;
+  border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 8px 1px rgba(200,164,93,.7);
+}
+
+.page-loader-icon{
+  position:relative;
+  width:64px;height:64px;
+}
+
+/* Tallo: se "dibuja" de abajo hacia arriba con stroke-dashoffset. */
+.pl-stem{
+  stroke-dasharray:16;
+  animation:pl-stem-draw 2.6s ease infinite;
+}
+
+/* Las dos espigas brotan desde la base del tallo con un efecto de florecer. */
+.pl-leaf{
+  transform-box:fill-box;
+  transform-origin:50% 100%;
+}
+.pl-leaf-left{
+  animation:pl-leaf-left-grow 2.6s ease infinite;
+}
+.pl-leaf-right{
+  animation:pl-leaf-right-grow 2.6s ease infinite;
+}
+
+/* El grupo completo (tallo + espigas) se desvanece al final de cada ciclo
+   antes de reiniciar, para que el "salto" del redibujado quede oculto. */
+.pl-plant{
+  animation:pl-plant-cycle 2.6s ease infinite;
+}
+
+.page-loader-word{
+  position:absolute;
+  bottom:26px;
+  left:50%;
+  transform:translateX(-50%) translateY(4px);
+  font-family:'Fraunces',serif;
+  font-size:.92rem;
+  font-weight:600;
+  letter-spacing:.04em;
+  color:#328195;
+  opacity:0;
+  animation:pl-word-fade 2.6s ease infinite;
+}
+
+@keyframes pl-stem-draw{
+  0%{stroke-dashoffset:16;}
+  25%,100%{stroke-dashoffset:0;}
+}
+@keyframes pl-leaf-left-grow{
+  0%,18%{transform:scale(.15);opacity:0;}
+  45%,100%{transform:scale(1);opacity:1;}
+}
+@keyframes pl-leaf-right-grow{
+  0%,26%{transform:scale(.15);opacity:0;}
+  53%,100%{transform:scale(1);opacity:1;}
+}
+@keyframes pl-plant-cycle{
+  0%{opacity:0;}
+  8%{opacity:1;}
+  82%{opacity:1;}
+  96%,100%{opacity:0;}
+}
+@keyframes pl-word-fade{
+  0%,30%{opacity:0;transform:translateX(-50%) translateY(4px);}
+  45%,80%{opacity:1;transform:translateX(-50%) translateY(0);}
+  96%,100%{opacity:0;transform:translateX(-50%) translateY(4px);}
+}
+@keyframes pl-glow-pulse{
+  0%,100%{transform:scale(.85);opacity:.35;}
+  50%{transform:scale(1.15);opacity:.65;}
+}
+@keyframes pl-orbit-spin{
   to{transform:rotate(360deg);}
 }
-@keyframes page-loader-pulse{
-  0%,100%{transform:scale(1);opacity:1;}
-  50%{transform:scale(.94);opacity:.75;}
-}
+
 @media (prefers-reduced-motion: reduce){
-  .page-loader-logo,.page-loader-ring{animation:none;}
+  .pl-stem{stroke-dashoffset:0;animation:none;}
+  .pl-leaf{transform:scale(1);opacity:1;animation:none;}
+  .pl-plant{opacity:1;animation:none;}
+  .page-loader-word{opacity:1;transform:translateX(-50%) translateY(0);animation:none;}
+  .page-loader-glow,.page-loader-orbit{animation:none;}
 }

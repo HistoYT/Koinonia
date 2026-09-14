@@ -27,9 +27,17 @@
 <body>
 
 <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Cargando Koinonía">
-  <div class="page-loader-mark">
-    <svg class="page-loader-ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="44"/></svg>
-    <img src="assets/koinonia-logo.png" alt="" class="page-loader-logo">
+  <div class="page-loader-mark" aria-hidden="true">
+    <span class="page-loader-glow"></span>
+    <span class="page-loader-orbit"><span class="page-loader-orbit-dot"></span></span>
+    <svg class="page-loader-icon" viewBox="0 0 24 24" fill="none">
+      <g class="pl-plant">
+        <path class="pl-stem" d="M12 22V6" stroke="#328195" stroke-width="1.6" stroke-linecap="round"/>
+        <path class="pl-leaf pl-leaf-left" d="M12 9c-3-1-4.5-3.5-4-6.5 3 1 4.6 3.3 4 6.5Z" fill="#328195"/>
+        <path class="pl-leaf pl-leaf-right" d="M12 9c3-1 4.5-3.5 4-6.5-3 1-4.6 3.3-4 6.5Z" fill="#328195"/>
+      </g>
+    </svg>
+    <span class="page-loader-word">Koinonía</span>
   </div>
 </div>
 <noscript><style>.page-loader{display:none;}</style></noscript>

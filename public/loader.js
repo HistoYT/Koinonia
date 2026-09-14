@@ -1,5 +1,5 @@
 (function () {
-  var MIN_VISIBLE_MS = 450;
+  var MIN_VISIBLE_MS = 1500; // deja ver al menos un ciclo completo del isotipo creciendo
   var MAX_WAIT_MS = 5000;
   var start = Date.now();
   var revealed = false;
