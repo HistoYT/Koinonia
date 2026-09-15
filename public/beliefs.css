@@ -88,6 +88,14 @@
 .mv-panel-mission p{color:rgba(255,255,255,.82);}
 .mv-panel-vision p{color:var(--ink-soft);}
 
+.mv-reference{
+  font-family:'Manrope',sans-serif;
+  font-size:.82rem;
+  font-weight:700;
+  letter-spacing:.06em;
+  color:var(--gold-light);
+}
+
 .mv-seam{
   position:absolute;
   top:50%;left:50%;

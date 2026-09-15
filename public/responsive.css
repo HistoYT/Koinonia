@@ -50,6 +50,7 @@
   .mv-number{font-size:4rem;top:10px;right:20px;}
   .program-grid{grid-template-columns:1fr 1fr;}
   .program-pillars{grid-template-columns:1fr 1fr;}
+  .values-grid{grid-template-columns:1fr 1fr;}
   .news-grid{grid-template-columns:1fr;}
   .event-featured{grid-template-columns:1fr;}
   .event-media{padding:0 40px 40px;}

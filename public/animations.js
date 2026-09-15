@@ -5,12 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (animatedElements.length > 0) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                }
+                // Se activa (entrada) y se desactiva (salida) cada vez que la
+                // sección cruza el umbral, en cualquiera de las dos direcciones,
+                // para que el efecto se repita al volver a hacer scroll.
+                entry.target.classList.toggle('is-visible', entry.isIntersecting);
             });
         }, {
-            threshold: 0.1 // Trigger when 10% of the element is visible
+            threshold: 0.12 // Se activa/desactiva cuando ~12% del elemento entra o sale
         });
         animatedElements.forEach(el => observer.observe(el));
     }
