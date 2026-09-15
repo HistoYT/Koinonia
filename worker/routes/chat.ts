@@ -22,16 +22,17 @@ INFORMACIÓN DE LA IGLESIA:
 - Ubicación: Carrera 42A # 1 Sur - 17, El Poblado, Medellín.
 - Correo: contacto@koinonia.org. Para hablar directo con el equipo, o para pedir oración, el botón de WhatsApp del chat es la mejor vía.
 
-HORARIOS DE REUNIÓN (todos en la sede física, salvo el que se indique como virtual):
-- Domingos 9:00 a.m.: Servicio dominical.
-- Domingos 7:00 p.m.: Servicio dominical virtual.
-- Martes 7:00 p.m.: Escuela de Liderazgo.
-- Miércoles 5:00 a.m.: Intercesión.
-- Miércoles 7:30 p.m.: Intercesión.
-- Sábados 6:00 a.m.: Intercesión.
+HORARIOS DE REUNIÓN (indico la modalidad de cada uno; no todos son en la sede física):
+- Domingos 9:00 a.m.: "Tiempo con Dios", presencial.
+- Domingos 7:00 p.m.: "Tiempo con Dios", virtual.
+- Lunes 7:00 p.m.: Escuela de Liderazgo Koinonía, presencial.
+- Martes 7:00 p.m.: Escuela de Liderazgo Koinonía, virtual.
+- Miércoles 5:00 a.m.: "Tan Solo Una Hora" (intercesión), virtual.
+- Último viernes de cada mes, 7:30 a 11:00 p.m.: "Cielos Abiertos", virtual (no es todas las semanas, solo el último viernes del mes).
+- Sábados 6:00 a.m.: "Tan Solo Una Hora" (intercesión), virtual.
 
 ESCUELA DE LIDERAZGO (sección "Formación" de la página) — un mismo propósito, dos brazos:
-1. Escuela Koinonía: formación de liderazgo dentro de la iglesia, cada martes 7:00 p.m. Carácter, servicio y multiplicación para toda la familia Koinonía.
+1. Escuela Koinonía: formación de liderazgo dentro de la iglesia, los lunes 7:00 p.m. presencial y los martes 7:00 p.m. virtual (mismo contenido, dos modalidades). Carácter, servicio y multiplicación para toda la familia Koinonía.
 2. Escuela de LideresVIP: formación de liderazgo con visión global, para líderes que multiplican en cada esfera de influencia. Tiene su propia plataforma en /LideresVIP con registro, inicio de sesión, cursos y talleres.
 Los 4 pilares que atraviesan la formación: Liderazgo y carácter, Liderazgo en el hogar, Liderazgo y servicio, Liderazgo en comunidad.
 

@@ -30,6 +30,18 @@
 }
 .schedule-item .time{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;margin-top:2px;}
 .schedule-item .label{font-size:.85rem;color:rgba(255,255,255,.68);}
+.schedule-item .modality{
+  display:inline-flex;align-items:center;gap:6px;
+  width:fit-content;
+  font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  margin-top:2px;
+}
+.schedule-item .modality::before{content:'';width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.schedule-item .modality-presencial{color:#6FD6C4;}
+.schedule-item .modality-presencial::before{background:#6FD6C4;}
+.schedule-item .modality-virtual{color:#A9C6FF;}
+.schedule-item .modality-virtual::before{background:#A9C6FF;}
+.schedule-item .frequency{font-size:.76rem;font-style:italic;color:rgba(255,255,255,.5);margin-top:2px;}
 .schedule .cta-link{
   align-self:center;
   font-weight:700;color:var(--gold-light);display:inline-flex;align-items:center;gap:8px;
