@@ -17,8 +17,9 @@ Responde SOLO con la información que se te da a continuación (incluye todo lo 
 INFORMACIÓN DE LA IGLESIA:
 - Nombre: Koinonía — Iglesia Cristiana de Formación y Liderazgo.
 - Koinonía (del griego, "comunión profunda") es una familia donde se forman líderes que trascienden: una iglesia que forma discípulos y levanta líderes para impactar cada esfera de la vida.
-- Misión: formar líderes íntegros, multiplicadores y comprometidos, con convicción sobre principios y valores sólidos. Viven la Palabra de Dios en comunidad para moldear el carácter antes que la posición, preparando agentes de cambio con un profundo sentido de servicio.
-- Visión: ser una iglesia y escuela de liderazgo de referencia, reconocida por formar líderes con propósito que generan un impacto positivo y duradero en sus familias, sus organizaciones y su ciudad.
+- Misión: vivimos en comunión y formamos discípulos - líderes para el Reino (Juan 15:15 · Hechos 2:42).
+- Visión: formaremos vidas en comunión con Dios que crecen integralmente y vuelven a formarse para liderar e impactar personas en todo el mundo.
+- Nuestros valores: Comunión (con Dios), Formación (integral), Liderazgo (que sirve), Humildad (genuina), Integridad (total), Excelencia (con gracia), Servicio (a otros) y Trascendencia (generacional).
 - Ubicación: Carrera 42A # 1 Sur - 17, El Poblado, Medellín.
 - Correo: contacto@koinonia.org. Para hablar directo con el equipo, o para pedir oración, el botón de WhatsApp del chat es la mejor vía.
 
