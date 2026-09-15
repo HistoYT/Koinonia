@@ -1,0 +1,76 @@
+/* ---------- PORTAFOLIO ESCUELA DE LIDERESVIP ---------- */
+.portfolio{padding:90px 0;background:var(--white);}
+.portfolio-inner{
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:56px;
+  align-items:center;
+}
+.portfolio-copy .eyebrow{color:var(--brand-blue-light);}
+.portfolio-copy h2{margin-bottom:14px;}
+.portfolio-copy p{color:var(--ink-soft);font-size:1.05rem;line-height:1.7;}
+
+.portfolio-qr-card{
+  display:flex;flex-direction:column;align-items:center;gap:14px;
+  background:var(--teal-pale);
+  border:1px solid rgba(15,58,66,.08);
+  border-radius:var(--radius);
+  padding:32px;
+  justify-self:center;
+}
+.portfolio-qr-trigger{
+  background:var(--white);
+  border:none;
+  border-radius:16px;
+  padding:16px;
+  cursor:zoom-in;
+  box-shadow:0 20px 40px -24px rgba(15,58,66,.35);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.portfolio-qr-trigger:hover{
+  transform:translateY(-4px) scale(1.02);
+  box-shadow:0 26px 50px -24px rgba(15,58,66,.45);
+}
+.portfolio-qr-trigger img{width:200px;height:200px;display:block;border-radius:6px;}
+.portfolio-qr-hint{font-size:.82rem;font-weight:700;color:var(--brand-blue-light);letter-spacing:.02em;}
+
+/* ---------- LIGHTBOX DEL QR ---------- */
+.qr-lightbox{
+  position:fixed;inset:0;z-index:2000;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;
+}
+.qr-lightbox[hidden]{display:none;}
+.qr-lightbox-backdrop{
+  position:absolute;inset:0;
+  background:rgba(15,33,41,.82);
+  backdrop-filter:blur(2px);
+}
+.qr-lightbox-panel{
+  position:relative;z-index:1;
+  background:var(--white);
+  border-radius:20px;
+  padding:36px;
+  display:flex;flex-direction:column;align-items:center;gap:14px;
+  box-shadow:0 40px 80px -30px rgba(0,0,0,.5);
+  animation:qr-pop .25s ease;
+  max-width:min(90vw, 460px);
+}
+.qr-lightbox-panel img{width:min(70vw,380px);height:min(70vw,380px);display:block;}
+.qr-lightbox-panel p{margin:0;font-size:.9rem;color:var(--ink-soft);font-weight:600;}
+.qr-lightbox-close{
+  position:absolute;top:-16px;right:-16px;
+  width:38px;height:38px;border-radius:50%;
+  background:var(--brand-blue);color:var(--white);
+  border:3px solid var(--white);
+  font-size:1.1rem;line-height:1;
+  cursor:pointer;
+  box-shadow:0 8px 18px -6px rgba(0,0,0,.4);
+}
+@keyframes qr-pop{
+  from{transform:scale(.9);opacity:0;}
+  to{transform:scale(1);opacity:1;}
+}
+@media (prefers-reduced-motion: reduce){
+  .qr-lightbox-panel{animation:none;}
+}

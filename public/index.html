@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="beliefs.css">
 <link rel="stylesheet" href="values.css">
 <link rel="stylesheet" href="programs.css">
+<link rel="stylesheet" href="portfolio.css">
 <link rel="stylesheet" href="event-banner.css">
 <link rel="stylesheet" href="news.css">
 <link rel="stylesheet" href="collage.css">
@@ -290,6 +291,31 @@
   </div>
 </section>
 
+<section class="portfolio" id="portafolio">
+  <div class="container portfolio-inner">
+    <div class="portfolio-copy scroll-animate">
+      <span class="eyebrow">Escuela de LideresVIP</span>
+      <h2>Descarga nuestro portafolio</h2>
+      <p>Conoce en detalle los programas, talleres y el camino de formación de la Escuela de LideresVIP. Escanea el código QR con la cámara de tu celular para descargarlo al instante.</p>
+    </div>
+    <div class="portfolio-qr-card scroll-animate">
+      <button type="button" class="portfolio-qr-trigger" id="qrTrigger" aria-haspopup="dialog" aria-label="Ampliar código QR para escanear mejor">
+        <img src="assets/lideresvip-portafolio-qr.jpg" alt="Código QR para descargar el portafolio de la Escuela de LideresVIP" width="372" height="366">
+      </button>
+      <span class="portfolio-qr-hint">Toca el código para ampliarlo</span>
+    </div>
+  </div>
+</section>
+
+<div class="qr-lightbox" id="qrLightbox" hidden>
+  <div class="qr-lightbox-backdrop" id="qrLightboxBackdrop"></div>
+  <div class="qr-lightbox-panel" role="dialog" aria-modal="true" aria-label="Código QR ampliado">
+    <button type="button" class="qr-lightbox-close" id="qrLightboxClose" aria-label="Cerrar">✕</button>
+    <img src="assets/lideresvip-portafolio-qr.jpg" alt="Código QR para descargar el portafolio de la Escuela de LideresVIP">
+    <p>Escanéalo con la cámara de tu celular</p>
+  </div>
+</div>
+
 <section class="event-banner" id="eventos">
   <div class="container">
     <div class="section-head scroll-animate">
@@ -426,6 +452,7 @@
         <h4>Conéctate</h4>
         <ul>
           <li><a href="#">Boletín Koinonía</a></li>
+          <li><a href="#portafolio">Portafolio LideresVIP</a></li>
           <li><a href="#novedades">Novedades</a></li>
           <li><a href="#">Transmisión en vivo</a></li>
           <li><a href="#">Necesito oración</a></li>
@@ -486,5 +513,6 @@
 <script src="chat-widget.js"></script>
 <script src="events.js"></script>
 <script src="vip-link.js"></script>
+<script src="qr-lightbox.js"></script>
 </body>
 </html>

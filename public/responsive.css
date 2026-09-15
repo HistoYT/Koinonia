@@ -51,6 +51,7 @@
   .program-grid{grid-template-columns:1fr 1fr;}
   .program-pillars{grid-template-columns:1fr 1fr;}
   .values-grid{grid-template-columns:1fr 1fr;}
+  .portfolio-inner{grid-template-columns:1fr;text-align:center;}
   .news-grid{grid-template-columns:1fr;}
   .event-featured{grid-template-columns:1fr;}
   .event-media{padding:0 40px 40px;}
