@@ -1,19 +1,21 @@
 /* ---------- HEADER ---------- */
 header{
   position:sticky;top:0;z-index:100;
+  height:var(--header-h);
   background: var(--white);
   border-bottom:1px solid rgba(18,59,93,.1);
   box-shadow: 0 12px 30px -22px rgba(15,50,82,.35);
 }
 .nav-wrap{
   display:flex;align-items:center;justify-content:space-between;
-  padding:14px 28px;max-width:var(--maxw);margin:0 auto;
+  height:100%;
+  padding:0 28px;max-width:var(--maxw);margin:0 auto;
   position: relative; /* Contexto para el menú desplegable */
 }
 .brand{display:flex;align-items:center;gap:10px;transition:none!important;animation:none!important;}
 .brand a{display:block; padding: 4px;}
 .brand img{
-  height:45px;
+  height:36px;
   width:auto;
 }
 nav.links{display:flex;align-items:center;gap:32px;}

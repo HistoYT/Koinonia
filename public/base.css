@@ -22,12 +22,13 @@
   /* Layout */
   --radius: 22px;
   --maxw: 1180px;
+  --header-h: 68px;
 }
 
 *{box-sizing:border-box;}
 /* Compensa la altura del header sticky para que las secciones no queden
    tapadas al saltar a un ancla (#nosotros, #programas, etc.). */
-html{scroll-behavior:smooth;scroll-padding-top:90px;}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 14px);}
 body{
   margin:0;
   font-family:'Manrope',sans-serif;
