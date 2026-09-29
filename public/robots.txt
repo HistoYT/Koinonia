@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://koinonia.davidmontoya20017.workers.dev/sitemap.xml
+Sitemap: https://koinoniaicfl.org/sitemap.xml
