@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://koinonia.davidmontoya20017.workers.dev/sitemap.xml

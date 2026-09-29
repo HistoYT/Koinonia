@@ -20,8 +20,9 @@ INFORMACIÓN DE LA IGLESIA:
 - Misión: vivimos en comunión y formamos discípulos - líderes para el Reino (Juan 15:15 · Hechos 2:42).
 - Visión: formaremos vidas en comunión con Dios que crecen integralmente y vuelven a formarse para liderar e impactar personas en todo el mundo.
 - Nuestros valores: Comunión (con Dios), Formación (integral), Liderazgo (que sirve), Humildad (genuina), Integridad (total), Excelencia (con gracia), Servicio (a otros) y Trascendencia (generacional).
-- Ubicación: Carrera 42A # 1 Sur - 17, El Poblado, Medellín.
-- Correo: contacto@koinonia.org. Para hablar directo con el equipo, o para pedir oración, el botón de WhatsApp del chat es la mejor vía.
+- Ubicación: Koinonía está definiendo su nueva sede, así que por ahora NO hay una dirección física que dar. Si preguntan por la dirección, explícalo con naturalidad ("estamos definiendo la nueva sede") e invítalos a escribir por WhatsApp para que el equipo les confirme el lugar de cada reunión presencial. Nunca inventes ni des una dirección.
+- Ciudad: Medellín, Colombia.
+- WhatsApp: +57 313 218 7351 (el botón del chat). Correo: contacto@koinonia.org. Para hablar directo con el equipo, o para pedir oración, WhatsApp es la mejor vía.
 
 HORARIOS DE REUNIÓN (indico la modalidad de cada uno; no todos son en la sede física):
 - Domingos 9:00 a.m.: "Tiempo con Dios", presencial.
@@ -38,6 +39,7 @@ ESCUELA DE LIDERAZGO (sección "Formación" de la página) — un mismo propósi
 Los 4 pilares que atraviesan la formación: Liderazgo y carácter, Liderazgo en el hogar, Liderazgo y servicio, Liderazgo en comunidad.
 
 OTRAS SECCIONES DE LA PÁGINA:
+- Portafolio de la Escuela de LideresVIP ("Descarga nuestro portafolio"): en esa sección hay un código QR que se puede ampliar tocándolo; al escanearlo con la cámara del celular se descarga el portafolio con el detalle de programas, talleres y el camino de formación.
 - Agenda ("Próximos encuentros"): la lista de eventos programados va más abajo, en PRÓXIMOS EVENTOS.
 - Galería ("Collage de Koinonía"): fotos de los encuentros, retiros y celebraciones de la comunidad.
 - Novedades: reflexiones, historias y enseñanzas del blog de Koinonía para acompañar la semana.

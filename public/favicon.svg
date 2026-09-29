@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Koinonía">
+  <rect width="64" height="64" rx="14" fill="#328195"/>
+  <g transform="translate(32 32) scale(2.2) translate(-12 -12)" fill="none">
+    <path d="M12 22V6" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round"/>
+    <path d="M12 9c-3-1-4.5-3.5-4-6.5 3 1 4.6 3.3 4 6.5Z" fill="#ffffff"/>
+    <path d="M12 9c3-1 4.5-3.5 4-6.5-3 1-4.6 3.3-4 6.5Z" fill="#ffffff"/>
+  </g>
+</svg>
