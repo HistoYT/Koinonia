@@ -47,7 +47,6 @@
   .hero-arrow{display:none;}
   .mv-split{grid-template-columns:1fr;}
   .mv-panel{padding:48px 32px;min-height:320px;}
-  .mv-number{font-size:4rem;top:10px;right:20px;}
   .program-grid{grid-template-columns:1fr 1fr;}
   .program-pillars{grid-template-columns:1fr 1fr;}
   .values-grid{grid-template-columns:1fr 1fr;}

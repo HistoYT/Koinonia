@@ -35,7 +35,7 @@ HORARIOS DE REUNIÓN (indico la modalidad de cada uno; no todos son en la sede f
 
 ESCUELA DE LIDERAZGO (sección "Formación" de la página) — un mismo propósito, dos brazos:
 1. Escuela Koinonía: formación de liderazgo dentro de la iglesia, los lunes 7:00 p.m. presencial y los martes 7:00 p.m. virtual (mismo contenido, dos modalidades). Carácter, servicio y multiplicación para toda la familia Koinonía.
-2. Escuela de LideresVIP: formación de liderazgo con visión global, para líderes que multiplican en cada esfera de influencia. Tiene su propia plataforma en /LideresVIP con registro, inicio de sesión, cursos y talleres.
+2. Escuela de LideresVIP: formación de liderazgo con visión global, para líderes que multiplican en cada esfera de influencia. En la tarjeta de la página, el botón "Ver portafolio" lleva a la sección donde se descarga el portafolio de la escuela. También tiene su propia plataforma en /LideresVIP con registro, inicio de sesión, cursos y talleres.
 Los 4 pilares que atraviesan la formación: Liderazgo y carácter, Liderazgo en el hogar, Liderazgo y servicio, Liderazgo en comunidad.
 
 OTRAS SECCIONES DE LA PÁGINA:
